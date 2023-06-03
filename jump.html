@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跳轉畫面</title>
+    <style>
+        body {
+            background-color: rgb(187, 238, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <script language="javascript">
+            var username = prompt("請輸入姓名:");
+            function redirectToNextPage() {
+                var targetPageURL = "last.html";
+                window.location.href = targetPageURL;
+            }
+            window.onload = function () {
+                var contentDiv = document.getElementById("content");
+                contentDiv.innerHTML = '<h1>' + "你好! " + username + " " + "現在為你轉到下一個網站" + '</h1>';
+                setTimeout(redirectToNextPage, 4000);
+
+                var paragraph = document.createElement('p');
+                paragraph.textContent = "如果沒自動跳轉，請點擊 ";
+
+                var link = document.createElement('a');
+                link.href = "last.html";
+
+                var linkText = document.createElement('span');
+                linkText.textContent = "這裡";
+
+                link.appendChild(linkText);
+                paragraph.appendChild(document.createTextNode(" "));
+                paragraph.appendChild(link);
+                paragraph.appendChild(document.createTextNode(" 進入下一個網站。"));
+                contentDiv.appendChild(paragraph);
+            };
+        </script>
+    </div>
+</body>
+
+</html>

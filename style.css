@@ -1,0 +1,242 @@
+*,
+::after,
+::before {
+    box-sizing: content-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+content {
+    background-color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+article .group-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 19.92px 0px;
+}
+
+article .group-introduce {
+    font-size: 18.72px;
+    font-weight: bold;
+    margin: 18.72px 0px;
+}
+
+.card {
+    background-color: #f9df98;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+.card a {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color: #0000EE;
+    font-size: small;
+}
+
+.card .card-name,
+.card .card-description {
+    margin: 0;
+}
+
+.card .card-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 19px 0px;
+}
+
+.card .card-description {
+    font-size: 16px;
+    margin: 16px 0px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.nav-bar {
+    height: 3.5rem;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+    width: 100%;
+}
+
+.nav-bar .words .title {
+    font-size: 25.5px;
+    font-weight: bold;
+}
+
+.nav-bar a {
+    color: #f2f2f2;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav-bar .words {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav-bar .nav-link {
+    color: #f2f2f2;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.nav-bar .nav-link:hover {
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+}
+
+.nav-bar .nav-link:not(:hover) {
+    border-radius: 10px;
+    background-color: black;
+    transition: background-color 0.3s;
+}
+
+.nav-bar .nav-link .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-bar .nav-link .dropdown-item {
+    text-align: center;
+}
+
+.nav-bar .nav-link:hover .dropdown-menu {
+    display: block;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropdown-menu:hover {
+    border-radius: 10px;
+}
+
+.dropdown .dropdown-menu .dropdown-item:hover {
+    border-radius: 10px;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 0;
+    list-style: none;
+}
+
+.dropdown-item {
+    text-align: center;
+}
+
+.dropdown-item a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+.dropdown-item a:hover {
+    background-color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-menu {
+    background-color: black;
+}
+
+.dropdown-menu a {
+    color: white;
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: rgb(174, 255, 252);
+    }
+
+    .nav-bar a {
+        float: none;
+        display: flex;
+        text-align: left;
+    }
+
+    img {
+        width: 200px;
+        height: auto;
+    }
+
+    .card {
+        text-align: center;
+        background-color: aqua;
+    }
+}
